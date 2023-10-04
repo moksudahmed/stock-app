@@ -23,7 +23,7 @@ function fetchStockData(apiUrl) {
 
 function displayStockData(data) {
     const stockList = data.map((stock) => {
-        return `<p><strong>${stock.TRADING_CODE}</strong>: ${stock.CHANGE}${stock.CLOSE}${stock.HIGH}${stock.LOW}</p>`;
+        return `<p><strong>${stock.TRADING_CODE}</strong> CH: ${stock.CHANGE} Cl: ${stock.CLOSE} H:${stock.HIGH} L:${stock.LOW}</p>`;
     }).join('');
 
     stockDataElement.innerHTML = stockList;
